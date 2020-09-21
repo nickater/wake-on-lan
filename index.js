@@ -9,10 +9,9 @@ app.get('/wol', (req, res) => {
     if (error instanceof Error) {
       console.error(error);
       throw error;
+    } else {
+      res.send({msg: 'waking up the power house'});
     }
-
-    console.log({stdout});
-    console.log({stderr});
   })
 })
 
