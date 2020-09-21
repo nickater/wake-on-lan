@@ -10,6 +10,7 @@
   "author": "Nick Ater",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "wake_on_lan": "^1.0.0"
   }
 }
