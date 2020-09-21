@@ -1,12 +1,13 @@
 const express = require('express');
-const wol = require('wake_on_lan');
+const { spawn } = require('child_process')
 const app = express();
 
 const port = 3001
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-  wol.wake('98:48:27:40:0A:71');
+app.get('/wol', (req, res) => {
+  spawn('wakeonlan 98:48:27:40:0A:71').stdout.on('data', (data) => {
+    res.send({data});
+  })
 })
 
 app.listen(port, () => {
