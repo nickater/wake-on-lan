@@ -5,11 +5,12 @@ const app = express();
 const port = 3001
 
 app.get('/', (req, res) => {
-  exec('wakeonlan 98:48:27:40:0A:71', (error, stdout, stderr) => {
+  exec('wakeonlan 98:48:27:40:0A:71', (error, stdout) => {
     if (error instanceof Error) {
       console.error(error);
       throw error;
     } else {
+      res.statusCode = 204;
       res.send({
         output: stdout,
         msg: 'you got it dude!'
