@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     } else {
       res.send({
         output: stdout,
-        msg: req.headers.msg || 'sure thing' 
+        msg: req.headers.msg || 'sure thing bobo' 
       });
     }
   })
@@ -23,4 +23,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
-
