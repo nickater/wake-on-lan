@@ -6,14 +6,15 @@ const port = 3001
 
 app.get('/', (req, res) => {
   exec('wakeonlan 98:48:27:40:0A:71', (error, stdout) => {
-    if (error instanceof Error) {
-      console.error(error);
-      throw error;
-    } else {
-      res.statusCode = 204;
+    if(!error instanceof Error) {
       res.send({
         output: stdout,
-        msg: 'you got it dude!'
+        msg: req.headers.msg || 'sure thing' 
+      });
+    } else {
+      res.send({
+        output: stderr,
+        msg: 'something went wrong'
       });
     }
   })
