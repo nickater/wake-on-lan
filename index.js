@@ -10,7 +10,10 @@ app.get('/', (req, res) => {
       console.error(error);
       throw error;
     } else {
-      res.send({msg: stdout});
+      res.send({
+        output: stdout,
+        msg: 'you got it'
+      });
     }
   })
 })
