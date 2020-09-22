@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     } else {
       res.send({
         output: stdout,
-        msg: 'you got it'
+        msg: 'you got it, dude!'
       });
     }
   })
