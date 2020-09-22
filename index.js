@@ -4,13 +4,13 @@ const app = express();
 
 const port = 3001
 
-app.get('/wol', (req, res) => {
+app.get('/', (req, res) => {
   exec('wakeonlan 98:48:27:40:0A:71', (error, stdout, stderr) => {
     if (error instanceof Error) {
       console.error(error);
       throw error;
     } else {
-      res.send({msg: 'waking up the power house'});
+      res.send({msg: stdout});
     }
   })
 })
