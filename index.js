@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     } else {
       res.send({
         output: stdout,
-        msg: req.headers.msg || 'sure thing bobo' 
+        msg: req.headers.msg || 'launch successful'
       });
     }
   })
