@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     } else {
       res.send({
         output: stdout,
-        msg: req.headers.msg || 'launch successful'
+        msg: req.headers.msg || 'launch is successful'
       });
     }
   })
