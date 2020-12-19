@@ -6,9 +6,9 @@ const port = 3001
 
 app.get('/', (req, res) => {
   const fireUpStacey = wakeOnLan('D8:07:B6:54:DF:32');
-  const fireUpNick = wakeOnLan('98:48:27:40:0A:71');
+  // const fireUpNick = wakeOnLan('98:48:27:40:0A:71');
   res.send({
-    pauerhaus: fireUpNick,
+    pauerhaus: 'TEST',
     rssrig: fireUpStacey
   });
 })
