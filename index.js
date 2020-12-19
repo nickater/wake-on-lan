@@ -8,14 +8,14 @@ const STACEY_MAC = 'D8:07:B6:54:DF:32';
 
 app.get('/pauerhaus', (req, res) => {
   exec(`wakeonlan ${NICK_MAC}`, (stderr, stdout) => {
-    res.send('FIRED UP NICKS HOG MFER!')
+    res.send({msg:'FIRED UP NICKS HOG!'})
   });
 
 })
 
 app.get('/rss-rig', (req, res) => {
   exec(`wakeonlan ${STACEY_MAC}`, (stderr, stdout) => {
-    res.send('FIRED UP STACEYS RIG!! FUCK YEAH')
+    res.send({msg: 'FIRED UP STACEYS RIG!'})
   });
 
 })
