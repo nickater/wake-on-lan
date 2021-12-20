@@ -1,6 +1,7 @@
 {
   "name": "response",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +11,7 @@
   "author": "Nick Ater",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "wakeonlan": "^0.1.0"
   }
 }
