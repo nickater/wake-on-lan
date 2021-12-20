@@ -3,7 +3,7 @@ import wakeonlan from 'wakeonlan'
 
 const app = express();
 
-const port = 3002;
+const port = 3001;
 const NICK_MAC = '98:48:27:40:0A:71';
 const STACEY_MAC = 'D8:07:B6:54:DF:32';
 
